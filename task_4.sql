@@ -1,5 +1,3 @@
--- SQL query to retrieve the schema of the 'books' table
--- including column names, data types, nullability, keys, defaults, and extra information
 SELECT
     TABLE_NAME,
     COLUMN_NAME,
@@ -12,8 +10,7 @@ SELECT
 FROM
     INFORMATION_SCHEMA.COLUMNS
 WHERE
-    TABLE_SCHEMA = DATABASE()
+    TABLE_SCHEMA = 'alx_book_store'
     AND TABLE_NAME = 'books'
 ORDER BY
     ORDINAL_POSITION;
-
